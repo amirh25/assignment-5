@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+     <!-- header -->
+     <div class="flex justify-between items-center mb-6 max-w-7xl mx-auto p-6 bg-white rounded-lg shadow-md mt-4">
+        <div class="flex items-center space-x-2 ">
+            <img src="assets/logo.png" alt="Logo" class="w-8 h-8">
+            <h1 class="text-2xl font-bold">Dev<span class="text-blue-600">Board</span></h1>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="rounded-md bg-gray-300 flex p-1 space-x-2">
+                <img src="assets/checkbox.png" alt="Tasks" class="w-6 h-6">
+            <span class="text-xl font-bold increase">23</span>
+            </div>
+            <img src="assets/theme-btn.png" alt="Theme" class="w-6 h-6" id="themeImage">
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto p-6 bg-white rounded-lg shadow-md">
+       
+
+        <section class="grid grid-cols-4 gap-4">
+            <!-- task Summary -->
+       <section class="col-span-3">
+        <div class="grid grid-cols-4 gap-4 mb-6 items-center p-4">
+            <!-- left Box -->
+            <div class="p-4 bg-blue-50 rounded-lg flex items-center space-x-4 col-span-1">
+                <img src="assets/checkbox.png" alt="Tasks" class="w-8 h-8">
+                <div>
+                    <p class="text-sm">Task Assigned</p>
+                    <p class="text-2xl font-bold" id="task-count">06</p>
+                </div>
+            </div>
+        
+            <!-- middle Box -->
+            <div class="p-1 bg-blue-600 text-white rounded-lg text-center col-span-2" id="discoverNew">
+                <div class="flex justify-center items-center">
+                    <img src="assets/board.png" alt="">
+                    <p class="text-lg">Discover Something <br>New Today!</p>
+                </div>
+            </div>
+        
+            <!-- right Box -->
+            <div class="p-1 bg-gray-100 rounded-lg text-center col-span-1 flex items-center">
+                <img src="assets/calender.png" alt="Calendar" class="w-8 h-8 mx-auto">
+                <p class="text-lg font-bold"><br><span id="currentDate"></span></p>
+            </div>
+        </div>
+        
+
+        <!-- task Cards -->
+        <div class="grid grid-cols-3 gap-4 mb-6">
+           
+            <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                <p class="text-sm bg-gray-200 inline-block px-2 rounded">ShopEase</p>
+                <h3 class="text-lg font-bold mt-2">Fix Mobile Button Issue</h3>
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <p class="text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping issues...</p>
+                </div>
+                <p class="text-sm mt-4">Deadline: <strong>21 March 2025</strong></p>
+                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded completed-btn">Completed</button>
+            </div>
+
+            <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                <p class="text-sm bg-gray-200 inline-block px-2 rounded">CloudSync</p>
+                <h3 class="text-lg font-bold mt-2">Add Dark Mode</h3>
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <p class="text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping issues...</p>
+                </div>
+                <p class="text-sm mt-4">Deadline: <strong>21 March 2025</strong></p>
+                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded completed-btn">Completed</button>
+            </div>
+
+            <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                <p class="text-sm bg-gray-200 inline-block px-2 rounded">SwiftPay</p>
+                <h3 class="text-lg font-bold mt-2">Optimize Home Page</h3>
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <p class="text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping issues...</p>
+                </div>
+                <p class="text-sm mt-4">Deadline: <strong>21 March 2025</strong></p>
+                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded completed-btn">Completed</button>
+            </div>
+
+            <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                <p class="text-sm bg-gray-200 inline-block px-2 rounded">Meta</p>
+                <h3 class="text-lg font-bold mt-2">Add new emoji 🐱</h3>
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <p class="text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping issues...</p>
+                </div>
+                <p class="text-sm mt-4">Deadline: <strong>21 March 2025</strong></p>
+                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded completed-btn">Completed</button>
+            </div>
+
+            <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                <p class="text-sm bg-gray-200 inline-block px-2 rounded">Google LLC</p>
+                <h3 class="text-lg font-bold mt-2">Integrate OpenAI API</h3>
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <p class="text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping issues...</p>
+                </div>
+                <p class="text-sm mt-4">Deadline: <strong>21 March 2025</strong></p>
+                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded completed-btn">Completed</button>
+            </div>
+
+            <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                <p class="text-sm bg-gray-200 inline-block px-2 rounded">Glassdoor</p>
+                <h3 class="text-lg font-bold mt-2">Improve Job searching</h3>
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <p class="text-sm text-gray-600">Debug using Chrome DevTools, check for overlapping issues...</p>
+                </div>
+                <p class="text-sm mt-4">Deadline: <strong>21 March 2025</strong></p>
+                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded completed-btn">Completed</button>
+            </div>
+        </div>
+
+        
+       </section>
+       <aside class="col-span-1 mt-4">
+        <!-- activity Log -->
+        <div class="p-4 bg-gray-50 rounded-lg shadow-md grid grid-cols-1 gap-6">
+            <div class="flex gap-3 justify-center items-center">
+                <img src="assets/activity.png" alt="">
+                <span>Activity Log</span>
+            </div>
+            <button id="clearHistory" class="bg-blue-600 text-white py-2 rounded">Clear History</button>
+
+        </div>
+       </aside>
+        </section>
+    </div>
+     <script src="script/utility.js"></script>
+     <script>
+        
+        document.getElementById('discoverNew').addEventListener('click', () => {
+            window.location.href = 'newpage.html'; 
+        });
+     </script>
+      
+     
+</body>
+</html>
